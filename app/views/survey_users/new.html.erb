@@ -1,0 +1,106 @@
+<div class="container">
+<h1>Purpose in Life Survey</h1>
+<%= form_for @survey_user, html: {id: "pil_survey_form" } do |f| %>
+	<% fields_for @survey do |s| %>
+	
+	 <span>Click <a href="#">here</a>  if you would like to stop receiving these surveys</span>
+	 
+	 <h2>First, we have a few demographic questions:</h2>
+	<div class="question_set">
+<div class="dq">
+	
+	<%= s.label "Employment:" %>
+	<%= errors_for(@survey, :employment) %>
+	<%= s.select :employment, ["", "Full-time", "Part-time", "Unemployed"] %>
+</div>	
+	<div class="dq">	
+	<%= s.label "Marital Status:" %>
+	<%= errors_for(@survey, :marital_status) %>
+	<%= s.select :marital_status, ["", "Single", "Married", "Divorced"] %>
+</div>
+
+	<% if SurveyUser.initial_survey?(@email) %>
+		<div class="dq">
+		<%= f.label "Highest Level of Education:" %>
+		<%= errors_for(@survey_user, :education) %>
+		<%= f.select :education, ["", "High school", "College", "Graduate school", "None of the above"] %>
+		</div>
+		
+		<% if SurveyUser.caregiver? %>
+			<div class="dq">
+			<%= f.label "How long have you been a caregiver?" %>
+			<%= f.select :length_of_time, ["", "<6 months", "6 months - 1 year", "1-2 years", "3-4 years", "4-5 years", "5+ years"] %>
+			</div>
+			<div class="dq">
+			<%= f.label "I provide care for my:" %>
+			<%= f.select :care_for, ["", "Parent", "Child", "Sibling", "Spouse", "Other family member", "Friend/Other" ] %>
+			</div>
+		<% end %>
+	<% end %>
+
+		<% if SurveyUser.ms? %>
+		<div class="dq">
+		<%= s.label :disability_label, "Do you need a walking aid (cane, crutch, wheelchair, etc.) to go about your daily activities?" %>
+		<div class="rb">
+		<%= s.radio_button :disability, "yes" %>
+		<%= s.label :disability_yes, "Yes" %>
+
+		<%= s.radio_button :disability, "no" %>
+		<%= s.label :disability_no, "No" %>
+		</div>
+		</div>
+		
+		<div class="dq">
+		<%= s.label :exacerbation_label, "When was your last exacerbation (worsening of MS symptoms lasting longer than 24 hours)?" %>
+		<%= s.select :last_exacerbation, ["", "Now", "<1 month ago", "1-3 months ago", "3-6 months ago", "6-12 months ago", "1+ years ago", "N/A" ] %>
+		</div>
+	
+		<div class="dq">
+		<%= s.label :new_sx_label, "Did you experience new MS symptoms with your last clinical exacerbation?" %>
+		<div class="rb">
+		<%= s.radio_button :new_symptoms, "yes" %>
+		<%= s.label :new_sx_yes, "Yes" %>
+
+		<%= s.radio_button :new_symptoms, "no" %>
+		<%= s.label :new_sx_no, "No" %>
+
+		<%= s.radio_button :new_symptoms, "n/a" %>
+		<%= s.label :new_sx_na, "N/A" %>
+		</div>
+		</div>
+	<% end %>
+
+
+
+
+	</div>
+	
+	<h2> Please rank each of these statements as they apply to you: </h2>
+	<div class="question_set">
+	<% Survey.PILqs.count.times do |q| %>
+		<div class="q">
+			<%= s.label "pil#{q+1}_stem".to_sym, "#{q+1}. #{Survey.PILqs[q][:stem]}:" %>
+			<%= errors_for(@survey, "pil#{q+1}".to_sym) %>
+			<% 7.times do |n| %>
+				<div class="PIL_radio">
+					<%= s.radio_button "pil#{q+1}".to_sym, n+1 %>
+					<%= s.label "pil#{q+1}_label#{n+1}".to_sym, n+1 %>
+				</div>
+			<% end %>
+	
+			<div class="labels">
+				<span class = "left"><%= Survey.PILqs[q][:l] %></span>
+				<span class = "right"><%= Survey.PILqs[q][:r] %></span>
+			</div>
+		</div>
+	<% end %>
+	</div>
+	
+	<%= f.submit "Submit your responses" %>
+	
+	<div class="container">
+      <%= debug(params) if Rails.env.development? %>
+    </div>
+<% end %>
+<% end %>
+</div>

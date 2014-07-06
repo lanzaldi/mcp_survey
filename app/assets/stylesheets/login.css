@@ -1,0 +1,23 @@
+/* Login View */
+#LoginPane{
+  padding-top: 10px;
+  background: #36383b;
+}
+
+#LoginPane h1{
+  margin-bottom: 0;
+}
+
+.login-container{
+  padding-top: 25px;
+}
+
+.login-container fieldset,
+.fb-container{
+  width: 70%;
+}
+
+.fb-container{
+  margin-bottom: 30px;
+}
+

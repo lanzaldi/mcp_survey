@@ -1,0 +1,64 @@
+rect:hover{
+    cursor: pointer;
+}
+
+#moodifier-container{
+    position: fixed;
+    width: 100%;
+    top: 105px;
+    z-index: 1001;
+    background:#36383b;
+}
+
+#moodifier-shrunk{
+    display: none;
+    width: 1024px;
+    margin: 0 auto;
+    background: #37383c;
+    z-index: 20;
+}
+
+#moodifier{
+    height: 350px;
+    width: 1024px;
+    margin: 0 auto;
+    background: image-url('moodifier-bg.jpg') no-repeat;
+}
+
+#expand-moodifier{
+    background: transparent;
+}
+
+#expand-moodifier a {
+    background: #36383b;
+    position: absolute;
+    left: 80%;
+    color: #0bebda;
+    padding: 8px;
+    text-decoration: none;
+}
+
+#expand-moodifier a:hover{
+  color: #099d92;
+}
+
+.moodifier-mini{
+    height: 30px;
+    width: 100%;
+    background: #36383b;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+#copy {
+    bottom: 0;
+    font: 300 .7em "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+    position: absolute;
+    right: 1em;
+    text-align: right;
+}
+
+#copy a {
+    color: #fff;
+}
+

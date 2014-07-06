@@ -1,0 +1,243 @@
+#header{
+	width: 100%;
+	display: block;
+	position: fixed;
+	top: 0;
+	background-color: #4d4d4d;
+	z-index: 100001;
+	}
+	
+body
+	{
+		background: #f0f4f4;
+		color: #5b5b5b;
+		font-family: 'signikalight', sans-serif;
+		padding: 0;
+		margin: 0;
+		
+	}
+/*********************************************************************************/
+/* Fixed Header                                                                        */
+/*********************************************************************************/
+.fixed-header {
+	width: 100%;
+	display: block;
+	position: fixed;
+	top: 0;
+	max-height: 62px;
+	background-color: #4d4d4d;
+	z-index: 100001;
+	overflow: hidden;
+	}
+.fixed-header .logo-container {
+	padding-top: 0.7em;
+	padding-left: 0.7em;
+	height: 62px;
+	max-width: 280px;
+	display: inline-block;
+	float: left;	
+}
+/* resize images */
+.fixed-header .logo-container img {
+    width: 100%;
+	max-width: 268px;
+    height: auto;
+	padding-top: 3px;
+	
+}
+@media screen and (max-width: 410px) {
+.fixed-header .logo-container {
+	max-width: 65%;
+}
+.login #container{
+	font-size: 10px;
+	max-width: 110px;
+	margin-top: -1px;
+}	
+}
+/* login */
+.login #container{
+	float: right;
+	display: inline-block;
+	max-width: 220px;
+	padding-right: 0;
+	margin-top: 2px;
+}	
+.login {
+	margin: 20px 0;
+	font-size: 13px;
+}
+.login li {
+	margin: 0 8px 11px 0;
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+}
+.login a {
+	background: #00BF56;
+	border: 1px solid #00AA4D;
+	border-radius: 3px;
+	padding: 10px 10px;
+	text-decoration: none;
+	color: #fff;
+	line-height: 100%;
+}
+.login a:hover {
+	background: #00AF4B;
+}
+@media screen and (max-width: 370px) {
+	.login {
+		position: relative;
+		min-height: 40px;
+	}	
+	.login ul {
+		width: 75px;
+		padding: 0;
+		position: absolute;
+		margin-top: -2px;
+		border-radius: 3px;
+		box-shadow: 0 1px 2px rgba(0,0,0,.3);
+	}
+}
+
+/*********************************************************************************/
+/* Login                                                                       */
+/*********************************************************************************/
+#login-dropdown  {
+	display: block;
+	top: 45px;
+	left: 0;
+	right: 0;	
+	height: auto;
+	position: fixed;
+	z-index: 1000005;
+	width: 100%;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #e6e7e8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e6e7e8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#e6e7e8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#e6e7e8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#e6e7e8 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#e6e7e8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e6e7e8',GradientType=0 ); /* IE6-9 */
+	box-shadow:0px 2px 10px #666;
+	z-index: 100;
+}
+
+#login-dropdown .login {
+	z-index: 999;
+	left: 0;
+	right: 0;
+	width: 100%;
+}
+
+#login-dropdown .col {
+	display: inline-block;
+	overflow: hidden;
+	padding: 32px 0 8px 0;
+	vertical-align: top;
+	width: 49%;
+}
+#login-dropdown .col>div {
+	display: inline-block;
+	font-size: 16px;
+	padding-left: 87px;
+	text-align: left;
+	width: 320px;}
+
+#login-dropdown h3 {
+	font-family: 'signikaregular';
+	font-size: 22px;
+	padding-bottom: 4px;
+	color: #00BF56;}
+
+#login-dropdown .col>div a {
+	background: none;
+	border: 0;
+	border-radius: 3px;
+	padding: 0;
+	color: #999;
+	text-transform: none;}
+
+#login-dropdown #input_loginButton,
+#login-dropdown #input_signupButton,
+#login-dropdown #input {
+	background-color: #00BF56;
+	border: 1px solid #00AA4D;
+	border-radius: 2px;
+	box-shadow: none;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-family: HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+	font-size: 12px;
+	-webkit-font-smoothing: antialiased;
+	font-smooth: always;
+	font-smoothing: antialiased;
+	font-weight: 700;
+	height: auto;
+	line-height: 100%;
+	margin: 0;
+	outline: 0;
+	padding: 8px 10px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: capitalize;
+	width: auto;}
+
+#login-dropdown #input:hover {
+	background-color: #00AF4B;
+}
+
+#login-dropdown input.block {
+	display: block;
+	width: 230px;
+	height: 30px;
+	margin: 4px 0 4px 0;
+	font-size: 0.9em;
+	color: #666;
+	padding: 0 4px 0 4px;}
+
+#login-dropdown form label {
+	color: #4e4e4e;
+	display: block;
+	font-size: 1em;
+	line-height: 18px;
+	margin: 5px 0 5px;}
+
+#login-dropdown .col:first-child {
+	text-align: right;}
+
+#login-dropdown .col:first-child>div {
+	padding: 0 87px 0 0;
+	text-align: left;
+	padding-bottom: 1em;}
+
+#login-dropdown .or{
+	border-right: 1px solid #666;
+	bottom: 0;
+	display: inline-block;
+	font-size: 0;
+	left: 50%;
+	position: absolute;
+	top: 0;
+	width: 0;
+}
+
+.or span{
+	border-radius: 2px;
+	background: #666;
+	color: #fff;
+	display: inline-block;
+	font-size: 18px;
+	height: 30px;
+	left: 50%;
+	line-height: 27px;
+	margin: -12px 0 0 -16px;
+	position: absolute;
+	text-align: center;
+	top: 48%;
+	vertical-align: middle;
+	white-space: nowrap;
+	width: 30px;
+}

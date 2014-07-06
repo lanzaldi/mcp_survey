@@ -1,0 +1,308 @@
+@media (max-width: 979px) {
+  body {
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .wrapper{
+    min-height: 602px;
+  }
+
+  /* Responsive Utility Items */
+  .user_header .user_meta .location,
+  .user_header ul > li > a.lessons-learned,
+  .questions-container,
+  .mobile-menu-hidden{
+    display: none !important;
+  }
+
+  /* Responsive Header */
+  .navbar-fixed-top {
+    position: fixed;
+  }
+
+  .btn.btn-navbar {
+    margin-right: 20px;
+  }
+
+  .user_header img.moods{
+    margin-left: 7px;
+    margin-top: 7px;
+  }
+
+  .user_header h3 {
+    font-size: 16px;
+    line-height: 38px;
+    margin-left: 0;
+  }
+
+  .user_header .user_meta span{
+    font-size: 12px;
+    margin-top: 22px;
+    margin-left: 7px;
+  }
+
+  .user_header ul > li {
+    border-left: 0 none;
+  }
+
+  .user_header ul > li > a {
+    padding-top: 16px;
+    padding-bottom: 0;
+    font-size: 13px;
+  }
+
+  .user_header ul > li > a.message {
+    background-position: 0px -129px;
+  }
+
+  .logged-in.navbar .nav > li > a, .logged-in.navbar .nav > li > a:hover {
+    padding-left: 15px;
+  }
+
+  .header-user-img {
+    margin-left: 7px;
+    margin-right: 5px;
+  }
+
+  .mobile-menu{
+    display: inline;
+  }
+
+  .navbar .nav {
+    position: relative;
+    left: auto;
+  }
+
+  .notify span.count {
+    display: inline-block;
+    position: relative;
+    top: -10px;
+    left: -90px;
+    border-radius: 9px;
+    margin-left: 0;
+  }
+
+  /* Reponsive profile */
+  .profile .post {
+    margin: 10px;
+  }
+
+  .profile .post input.comment {
+    width: 80%;
+    height: 34px;
+  }
+
+  .profile .post .comments p.small {
+    font-size: 9px;
+    text-align: right;
+    margin-top: -10px;
+    font-family: 'Arial';
+  }
+
+  .navbar .nav > li a.sign-up,
+  .navbar .nav > li a.login {
+    margin-left: 20px;
+  }
+
+  .profile .player {
+    height:237px
+  }
+
+  /* Moodifier entry */
+  #post,
+  #user {
+    padding-left: 8px;
+  }
+
+  #post .meta {
+    display: none;
+  }
+
+  .questions button > span {
+    height: 34px;
+    background-size: 55%;
+  }
+
+  .questions .btn-group > button.btn {
+    width: 86px;
+    height: 86px;
+    padding: 15px 0 0 0;
+  }
+
+  .questions button > span {
+    background-position: 21px -125px;
+  }
+
+  .questions button > span.thoughts {
+    background-position: 22px -82px;
+  }
+
+  .questions button > span.photo {
+    background-position: 22px -38px;
+  }
+
+  /* Homepage */
+  .container.main {
+    padding-top: 0;
+  }
+
+  .hero {
+    margin-top: 10px;
+  }
+
+
+  .hero .have-account {
+    margin-right: 12%;
+  }
+
+  .player p {
+    font-size: 16px;
+    color: #fff;
+    padding: 0;
+  }
+
+  .main .counterpaners {
+    display: none;
+  }
+
+  .moodifier-explanation {
+    background: transparent;
+  }
+
+  /* Messaging */
+  .friend-msg img,
+  .message img {
+    margin-bottom: 5px;
+  }
+
+  .friend-msg-container {
+    max-height: auto;
+    overflow: auto;
+    border-bottom: 3px solid #333;
+  }
+
+  /* Search Results */
+  .friend > .row-fluid > .span3 {
+    float: left;
+    width: 25%;
+  }
+
+  .friend > .row-fluid > .span9 {
+    float: left;
+    width: 69%;
+    margin-left: 5%
+  }
+
+  .friend > .row-fluid > .span9.actions {
+    width:100%;
+  }
+
+  /* Search Box */
+  .search-section h1 {
+    font-size: 32px;
+  }
+
+  .search-section label.radio.inline {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .search-section label {
+    font-size: 14px;
+  }
+
+  .search-section fieldset {
+    width: 96%;
+  }
+
+  input[type="text"].search-input {
+    height: 42px;
+    width: 66%;
+  }
+
+  input[type="submit"].search-btn {
+    width: 14%;
+  }
+
+  .search-section a.button{
+    margin-top: 20px;
+    margin-right: 3%;
+  }
+
+}
+
+
+@media (max-width: 766px) {
+  .user_header .user_meta>h3 {
+    border-right: 0 none;
+  }
+
+  .home .hero .player {
+    display:none;
+  }
+
+  .user_header .user_meta span {
+    display: none;
+  }
+
+ .user_header ul > li > a.message {
+    padding: 7px;
+    width: 20px;
+    overflow: hidden;
+    text-indent: -9999em;
+    margin-right: 10px;
+ }
+
+ .user_header ul > li > a.connect {
+    padding: 6px;
+    text-indent: -9999em;
+    width: 30px;
+ }
+
+  .radio.inline {
+    display: block;
+    margin-left: 2px !important;
+  }
+
+  .feed .user-info {
+    display:none;
+  }
+
+  .profile .player {
+    height:194px;
+  }
+
+  /* Search Box */
+  input[type="text"].search-input { height: 40px; margin-bottom: 0; width: 59%; }
+  input[type="submit"].search-btn { margin-bottom: 0; }
+  input[type="submit"].search-btn { width: 21%; height: 44px; }
+  select.search-input { height: 44px; width: 78%; margin-bottom: 0; }
+  .search-section .span3 { display: none; }
+  .search-row { margin-left: 5% !important; }
+  .search-section { padding: 2%; width: 86%; }
+  .search-section label.radio.inline { margin-bottom: 5px; }
+  .search-section h1 { font-size: 22px; }
+  .search-section h4 { font-size: 16px; margin: 0; }
+  .search-section .bottom-container .need-help { margin-top: 17px; }
+  .search-section a.button { margin-right: 6%; margin-top: 5px; }
+  .search-section hr { width: 94%; }
+  .search-section label.radio.inline { float: left; margin-right: 4%; }
+  .search-section .bottom-container .need-help { margin-top: 3px; }
+  .search-section a.button { margin-top: 10px; padding-left: 10px; padding-right: 10px; font-size: 16px; height: 32px; }
+
+  /* Menu */
+  .nav > li > a > img { height: 36px; }
+  .header-user-img > img { height: 18px; width: 18px; margin-top: 2px; }
+  .logged-in.navbar .nav > li > a, .logged-in.navbar .nav > li > a:hover { line-height: 12px; }
+  .nav > .moods > a { padding-top: 6px !important; height: 30px; }
+}
+
+
+
+
+
+
+
+
+

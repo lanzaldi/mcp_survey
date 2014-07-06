@@ -1,0 +1,66 @@
+#base .hero > form {
+  margin-left:22px;
+  width: 256px;
+}
+
+#base .hero > form > input[type="text"] {
+  width:180px;
+}
+
+#faq ul {
+  list-style:disc;
+}
+
+
+#faq {
+  background:#fff;
+  padding: 20px;
+}
+
+#faq h3 {
+  color:#11d743;
+  font-size:22px;
+  font-weight:normal;
+  background: image-url('community-icon-h3.png') 0px 3px no-repeat;
+  line-height:28px;
+  padding-left:33px;
+  margin-left:-33px;
+}
+
+#faq h4 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: normal;
+}
+
+#faq .content-wrapper > div {
+  border-bottom:1px solid #7c8187;
+  padding-bottom:20px;
+  padding-top:40px;
+  margin-top:-20px;
+}
+
+#faq .content-wrapper > div:last-child {
+  border-bottom:0 none;
+}
+
+#faq .content-wrapper {
+  width:650px;
+  margin: 0 auto;
+}
+
+#legal .container {
+  background:#fff;
+  padding:30px;
+}
+
+.about .player { 
+  height:349px;
+  cursor:pointer;
+}
+
+.about .founders_circle img:first-child {
+  cursor:pointer;
+}
+
+
